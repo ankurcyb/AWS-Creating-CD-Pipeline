@@ -26,6 +26,71 @@ This Architecture provided the visual representation of the services used in bui
 7. Python
 
 
+# Basic Terms 
+
+## what is AWS Elastic Beanstalk?
+
+AWS Elastic Beanstalk is a cloud computing service provided by Amazon Web Services (AWS) that simplifies the deployment and management of web applications and services. It abstracts away the underlying infrastructure details and automates the process of provisioning, scaling, and monitoring resources required to run applications.
+
+Key features of AWS Elastic Beanstalk include:
+
+Easy Deployment: With Elastic Beanstalk, developers can quickly deploy applications developed in various programming languages such as Java, .NET, Node.js, Python, Ruby, Go, and Docker containers.
+
+Automatic Scaling: Elastic Beanstalk automatically handles the scaling of resources based on application load. It can dynamically add or remove compute instances, scale storage, and adjust other resources to accommodate changes in traffic patterns.
+
+Monitoring and Management: Elastic Beanstalk provides built-in monitoring tools that allow developers to track the health and performance of their applications. It integrates with AWS CloudWatch for monitoring metrics such as CPU utilization, network traffic, and request latency.
+
+Load Balancing: Elastic Beanstalk includes built-in load balancing capabilities to distribute incoming traffic across multiple instances of an application, improving fault tolerance and scalability.
+
+Integration with Other AWS Services: Elastic Beanstalk seamlessly integrates with other AWS services such as Amazon RDS for database management, Amazon S3 for storage, and Amazon CloudFront for content delivery.
+
+Customization and Control: While Elastic Beanstalk abstracts away much of the infrastructure management, developers still have control over the configuration of underlying resources. They can customize environment settings, define scaling policies, and specify security settings according to their requirements.
+
+Overall, AWS Elastic Beanstalk simplifies the process of deploying and managing web applications by automating infrastructure management tasks and providing a scalable and reliable platform for hosting applications in the AWS cloud.
+
+## what is AWS CodeBuild?
+
+AWS CodeBuild is a fully managed continuous integration service provided by Amazon Web Services (AWS). It compiles source code, runs tests, and produces software packages that are ready for deployment. CodeBuild eliminates the need to manage build servers and infrastructure, allowing developers to focus on writing code.
+
+Key features of AWS CodeBuild include:
+
+Build Environments: CodeBuild provides pre-configured build environments for popular programming languages, frameworks, and platforms such as Java, Python, Node.js, Docker, and more. Custom build environments can also be created using Docker containers.
+
+Build Projects: Developers can define build projects in CodeBuild, specifying the source code repository, build environment, build commands, and output artifacts. Multiple build projects can be managed within a CodeBuild account to support different applications or branches.
+
+Integration with AWS Services: CodeBuild integrates seamlessly with other AWS services such as AWS CodeCommit, AWS CodePipeline, Amazon S3, and AWS Lambda. This enables developers to create end-to-end continuous integration and delivery (CI/CD) pipelines for automating the software release process.
+
+Scalability: CodeBuild automatically scales resources based on the size and complexity of the build job. It can parallelize build tasks across multiple compute instances to reduce build times and improve efficiency.
+
+Security and Access Control: CodeBuild provides security features such as AWS Identity and Access Management (IAM) integration, encryption of build artifacts, and support for customer-managed keys using AWS Key Management Service (KMS). Access to build projects and resources can be controlled using IAM policies.
+
+Custom Build Scripts: Developers have full control over the build process by defining custom build scripts in YAML or JSON format. CodeBuild supports a wide range of build commands and tools, allowing developers to automate build, test, and deployment tasks.
+
+Cost-effective: CodeBuild follows a pay-as-you-go pricing model, where users are charged based on the number of build minutes consumed. There are no upfront fees or long-term commitments, making it cost-effective for projects of any size.
+
+Overall, AWS CodeBuild simplifies the process of building and testing software by providing a scalable and managed build service that integrates with other AWS services to support CI/CD workflows.
+
+## what is AWS Pipeline ?
+
+
+AWS CodePipeline is a fully managed continuous integration and continuous delivery (CI/CD) service provided by Amazon Web Services (AWS). It automates the steps required to release software changes continuously, from source code through build, test, and deployment.
+
+Key features of AWS CodePipeline include:
+
+Pipeline Workflow: CodePipeline allows you to define a series of stages and actions that make up your software release process. Each stage represents a phase of your pipeline, such as source, build, test, and deploy. Within each stage, you can define one or more actions to perform specific tasks, such as fetching source code, running tests, or deploying to a server.
+
+Integration with AWS Services: CodePipeline integrates with other AWS services such as AWS CodeCommit, AWS CodeBuild, AWS CodeDeploy, and AWS Lambda. This allows you to create end-to-end automation workflows that cover the entire software release process. For example, you can trigger a build in CodeBuild whenever new code is committed to a CodeCommit repository, and then automatically deploy the built artifacts using CodeDeploy.
+
+Customizable Pipelines: CodePipeline allows you to create custom pipelines tailored to your specific requirements. You can define the sequence of stages and actions, specify the input and output artifacts for each action, and configure the conditions for transitioning between stages.
+
+Visual Pipeline Editor: CodePipeline provides a visual editor that allows you to graphically design and manage your pipelines. You can drag and drop stages and actions onto the pipeline canvas, configure settings for each action, and visualize the flow of changes through the pipeline.
+
+Scalability and Reliability: CodePipeline is a fully managed service that automatically scales to handle large-scale software release processes. It provides high availability and fault tolerance, with built-in redundancy and failover mechanisms to ensure reliable operation.
+
+Security and Access Control: CodePipeline integrates with AWS Identity and Access Management (IAM) to control access to pipeline resources. You can define IAM policies to restrict who can view, edit, or execute pipelines, and use AWS Key Management Service (KMS) for encryption of sensitive data.
+
+Overall, AWS CodePipeline simplifies the process of automating software release workflows by providing a managed service that integrates with other AWS tools and services. It enables teams to release software changes more frequently, reliably, and efficiently.
+
 # Process
 
 1. Setting up a Git respotory: 
@@ -197,7 +262,7 @@ This Architecture provided the visual representation of the services used in bui
 Developing this continuous delivery pipeline for the web application, we witness real-time updates as we synchronize changes directly from our local machine or GitHub repository. Additionally, integrating a manual review approval process ensures the security of our pipeline, enabling us to approve or disapprove content before it's published on the web application. Moreover, this pipeline's versatility allows deployment on complex architectures while maintaining the same mechanism, accommodating the addition of more stages seamlessly.
 
 
-#Acknowledgment
+# Acknowledgment
 
 This Project is sourced from AWS Resource center - [Create Continous Delivery Pipeline](https://aws.amazon.com/getting-started/hands-on/create-continuous-delivery-pipeline/)
 
