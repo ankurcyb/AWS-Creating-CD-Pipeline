@@ -70,7 +70,7 @@ Cost-effective: CodeBuild follows a pay-as-you-go pricing model, where users are
 
 Overall, AWS CodeBuild simplifies the process of building and testing software by providing a scalable and managed build service that integrates with other AWS services to support CI/CD workflows.
 
-## what is AWS Pipeline ?
+## what is AWS CodePipeline ?
 
 
 AWS CodePipeline is a fully managed continuous integration and continuous delivery (CI/CD) service provided by Amazon Web Services (AWS). It automates the steps required to release software changes continuously, from source code through build, test, and deployment.
